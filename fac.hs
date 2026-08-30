@@ -9,3 +9,4 @@ ffib a b 2 = a
 ffib a b n = ffib(a + b) a(n-1)
 
 fastfib = ffib 1 1 
+
