@@ -10,3 +10,6 @@ ffib a b n = ffib(a + b) a(n-1)
 
 fastfib = ffib 1 1 
 
+doubleMe x = x + x  
+
+doubleUs x y = x + y
