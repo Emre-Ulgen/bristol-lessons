@@ -1,8 +1,5 @@
-x = 'a'
-z = 5
-a = True
-b = [[1,2,3,4],[5,3,3,3],[1,2,2,3,4],[1,2,3]] 
+faktoriyel :: Integer -> Integer
+faktoriyel n = product [1..n]
 
-f = \y -> y * 10
-
-g = \u -> u * 5
+alan :: Float -> Float
+alan r = pi * r *r 
