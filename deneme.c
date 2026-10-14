@@ -7,4 +7,6 @@ int main() {
     scanf("%i", &number);
     printf("%i\n", number *3);
 
+    printf("%d * %d = %d", 4, 4, 16);
+
 }
