@@ -9,14 +9,33 @@
 // Integer constants representing grades.
 enum { G1, G21, G22, G3, Fail, Invalid };
 
+bool valid (int number, const char mark[]) {
+    if(number == 1 && mark[0] <= '9' && mark[0] >= '0') return true; 
+    if (number == 2 && mark[0] <= '9' && mark[0] >= '0' && mark[1] <= '9' && mark[1] >= '0' && mark[0] != '0') return true;
+    if (number == 3 && mark[0]== '1' && mark[1] == '0' && mark[2] == '0') return true;
+    return false;
+}
 // Convert a mark string into an integer.  Return -1 if it is not valid.
 // The argument n is the length of the string (normally 1 or 2 or 3).
 int convert(int n, const char mark[]) {
+    if (!valid(n, mark)) return -1;
+    else{
+        if (n == 1) return mark[0] - '0';
+        else if (n == 2) return (mark[0] - '0') * 10 + (mark[1] - '0');
+        else if (n == 3) return 100;
+    }
     return -1;
 }
 
 // Convert a mark integer into a grade.
 int grade(int m) {
+        if (m <= 100 && m >= 0) {
+        if (m >= 70) return G1;
+        else if (m >= 60) return G21;
+        else if (m >= 50) return G22;
+        else if (m >= 40) return G3;
+        else return Fail;
+    }
     return Invalid;
 }
 
